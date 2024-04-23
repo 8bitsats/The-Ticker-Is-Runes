@@ -1,0 +1,21 @@
+mod tests {
+    use super::*;
+    use anchor_lang::prelude::*;
+    use anchor_lang::solana_program::clock::Epoch;
+
+    #[tokio::test]
+    async fn test_early_sale_tax() {
+        let program = program_test();
+        let (mut banks_client, payer, recent_blockhash) = program.start().await;
+        let mint = Keypair::new();
+        let token_account_from = Keypair::new();
+        let token_account_to = Keypair::new();
+
+        // Setup accounts and mint
+        // Initialize and mint tokens to `token_account_from`
+        // Simulate an early sale and verify tax logic
+
+        // Assert that tax was deducted
+        // Assert that tokens were transferred minus tax
+    }
+}
